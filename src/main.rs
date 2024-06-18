@@ -1,8 +1,18 @@
+#![allow(dead_code)]
+
+enum Color {
+    Red,
+    Green,
+    Blue
+}
+
+fn print_color(color: Color) {
+    match color {
+        Color::Red => println!("red"),
+        Color::Green => println!("green"),
+        Color::Blue => println!("blue"),
+    }
+}
 fn main() {
-    let file = std::fs::read_to_string("project/lines").unwrap();
- 
-    file.lines()
-        .enumerate() // every single index
-        .filter(|(idx, _)| idx % 2 == 0)
-        .for_each(|(_, line)| println!("{}", line));
+    print_color(Color::Green)
 }
