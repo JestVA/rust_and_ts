@@ -17,5 +17,10 @@ fn append(items: &mut Vec<Item>) {
 
 fn main() {
     let mut items : Vec<Item> = vec![];
-    append(&mut items);    
+    append(&mut items);   
+
+    // calling some or none
+    let _foo = Some(5);
+    let _foo : Option<String> = None;
+
 }
