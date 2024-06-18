@@ -22,3 +22,29 @@ function printColor(color: Color) {
 }
 
 printColor(Color.Red)
+
+//////////////////////
+
+type Custom = {
+  age: number
+  name: string
+}
+
+type Item = number | string | Custom
+
+function append(items: Item[]) {
+  items.push('Hello there!')
+}
+
+const items: Item[] = []
+
+append(items)
+
+console.log(items)
+
+const numbers: number[] = []
+
+append(numbers)
+
+// Emotionally bruising moment
+console.log(numbers) // now we have a string in a numbers array!!!
