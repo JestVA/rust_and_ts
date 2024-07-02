@@ -12,3 +12,23 @@ impl Area for Rect {
         self.width * self.height
     }
 }
+
+struct RectIter {
+    points: Vec<(f64, f64)>,
+    idx: usize,
+}
+
+impl Iterator for RectIter {
+    type Item = (f64, f64);
+    fn next(&mut self) -> Option<Self::Item> {
+        if self.idx >= self.points.len() {
+            return None;
+        }
+
+        let point = self.points[self.idx];
+
+        self.idx += 1;
+
+        Some(point)
+    }
+}

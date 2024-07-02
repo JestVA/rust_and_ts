@@ -6,11 +6,11 @@ use std::f64::consts::PI;
 pub(crate) struct Circle {
     pub x: f64,
     pub y: f64,
-    pub radius: f64
+    pub radius: f64,
 }
 
 impl Area for Circle {
     fn area(&self) -> f64 {
-        return self.radius * self.radius * PI
+        return self.radius * self.radius * PI;
     }
 }
