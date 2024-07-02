@@ -9,6 +9,6 @@ pub(crate) struct Rect {
 
 impl Area for Rect {
     fn area(&self) -> f64 {
-        return self.width * self.height
+        self.width * self.height
     }
 }
